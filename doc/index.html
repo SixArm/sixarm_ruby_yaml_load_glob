@@ -1,0 +1,191 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>
+  File: README
+  
+    &mdash; Documentation by YARD 0.8.7.3
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '';
+  framesUrl = "frames.html#!" + escape(window.location.href);
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div id="header">
+      <div id="menu">
+  
+    <a href="_index.html">Index</a> &raquo; 
+    <span class="title">File: README</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+
+    <iframe id="search_frame"></iframe>
+
+    <div id="content"><div id='filecontents'>
+<p># SixArm.com » Ruby » <br> YAML load globs to iterators</p>
+<ul><li>
+<p>Docs: &lt;<a
+href="http://sixarm.com/sixarm_ruby_yaml_load_documents_globber/doc">sixarm.com/sixarm_ruby_yaml_load_documents_globber/doc</a>&gt;</p>
+</li><li>
+<p>Repo: &lt;<a
+href="http://github.com/sixarm/sixarm_ruby_yaml_load_documents_globber">github.com/sixarm/sixarm_ruby_yaml_load_documents_globber</a>&gt;</p>
+</li><li>
+<p>Email: Joel Parker Henderson, &lt;joel@sixarm.com&gt;</p>
+</li></ul>
+
+<p>## Introduction</p>
+
+<p>Load YAML files by specifying file globs, and yield to blocks  for more
+convenient processing of the results.</p>
+
+<p>Example: load documents from files that end in “.yaml”</p>
+
+<pre class="code ruby"><code class="ruby">YAML.load_globs_documents(&quot;*.yaml&quot;){|document|
+  ...
+}
+</code></pre>
+
+<p>Example: load documents from files that end in “.yaml” then process the
+key-value pairs:</p>
+
+<pre class="code ruby"><code class="ruby">YAML.load_globs_to_keys(&quot;*.yaml&quot;){|key,values|
+  ...
+}
+</code></pre>
+
+<p>For docs go to &lt;<a
+href="http://sixarm.com/sixarm_ruby_yaml_load_documents_globber/doc">sixarm.com/sixarm_ruby_yaml_load_documents_globber/doc</a>&gt;</p>
+
+<p>Want to help? We&#39;re happy to get pull requests.</p>
+
+<p>## Install quickstart</p>
+
+<p>Install:</p>
+
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_gem'>gem</span> <span class='id identifier rubyid_install'>install</span> <span class='id identifier rubyid_sixarm_ruby_yaml_load_documents_globber'>sixarm_ruby_yaml_load_documents_globber</span></code></pre>
+
+<p>Bundler:</p>
+
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_gem'>gem</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sixarm_ruby_yaml_load_documents_globber</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>~&gt;1.5.0</span><span class='tstring_end'>&quot;</span></span></code></pre>
+
+<p>Require:</p>
+
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sixarm_ruby_yaml_load_documents_globber</span><span class='tstring_end'>&quot;</span></span>
+</code></pre>
+
+<p>## Install with security (optional)</p>
+
+<p>To enable high security for all our gems:</p>
+
+<pre class="code ruby"><code class="ruby">wget http://sixarm.com/sixarm.pem
+gem cert --add sixarm.pem
+gem sources --add http://sixarm.com</code></pre>
+
+<p>To install with high security:</p>
+
+<pre class="code ruby"><code class="ruby">gem install sixarm_ruby_ --test --trust-policy HighSecurity</code></pre>
+
+<p>## Examples</p>
+
+<p>Require:</p>
+
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>sixarm_ruby_yaml_load_documents_globber</span><span class='tstring_end'>&quot;</span></span>
+</code></pre>
+
+<p>To load documents from all files that end in “.yaml”</p>
+
+<pre class="code ruby"><code class="ruby"><span class='const'>YAML</span><span class='period'>.</span><span class='id identifier rubyid_load_documents_globber_and_yield_document'>load_documents_globber_and_yield_document</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>*.yaml</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_document'>document</span><span class='op'>|</span>
+  <span class='comment'>#...whatever you want to do with each yaml document
+</span><span class='rbrace'>}</span>
+</code></pre>
+
+<p>To load documents from all files that end in “.yaml” and process the
+key-value pairs:</p>
+
+<pre class="code ruby"><code class="ruby"><span class='const'>YAML</span><span class='period'>.</span><span class='id identifier rubyid_load_documents_globber_and_yield_key_values'>load_documents_globber_and_yield_key_values</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>*.yaml</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_key'>key</span><span class='comma'>,</span><span class='id identifier rubyid_values'>values</span><span class='op'>|</span>
+  <span class='comment'>#...whatever you want to do with each yaml key and its yaml values
+</span><span class='rbrace'>}</span>
+</code></pre>
+
+<p>## Changes</p>
+<ul><li>
+<p>2012-03-14 1.5.0 Update docs, tests</p>
+</li></ul>
+
+<p>## License</p>
+
+<p>You may choose any of these open source licenses:</p>
+
+<pre class="code ruby"><code class="ruby">* Apache License
+* BSD License
+* CreativeCommons License, Non-commercial Share Alike
+* GNU General Public License Version 2 (GPL 2)
+* GNU Lesser General Public License (LGPL)
+* MIT License
+* Perl Artistic License
+* Ruby License</code></pre>
+
+<p>The software is provided “as is”, without warranty of any kind,  express or
+implied, including but not limited to the warranties of  merchantability,
+fitness for a particular purpose and noninfringement.</p>
+
+<p>In no event shall the authors or copyright holders be liable for any 
+claim, damages or other liability, whether in an action of contract,  tort
+or otherwise, arising from, out of or in connection with the  software or
+the use or other dealings in the software.</p>
+
+<p>This license is for the included software that is created by SixArm; some
+of the included software may have its own licenses, copyrights,  authors,
+etc. and these do take precedence over the SixArm license.</p>
+
+<p>Copyright © 2005-2013 Joel Parker Henderson</p>
+</div></div>
+
+    <div id="footer">
+  Generated on Wed Mar 12 20:17:43 2014 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.7.3 (ruby-2.1.0).
+</div>
+
+  </body>
+</html>
