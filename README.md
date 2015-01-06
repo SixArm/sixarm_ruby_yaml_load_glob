@@ -53,7 +53,7 @@ To enable high security for all our gems:
 
 To install with high security:
 
-    gem install sixarm_ruby_yaml_load_glob --test --trust-policy HighSecurity
+    gem install sixarm_ruby_yaml_load_glob --trust-policy HighSecurity
 
 
 ## Changes
