@@ -1,4 +1,4 @@
-# SixArm.com » Ruby » <br> YAML load glob to documents
+# Ruby » <br> YAML load glob to documents
 
 
 * Doc: <http://sixarm.com/sixarm_ruby_yaml_load_glob/doc>
