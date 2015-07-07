@@ -11,15 +11,15 @@ Gem::Specification.new do |s|
   s.homepage       = "http://sixarm.com/"
   s.licenses       = ["BSD", "GPL", "MIT", "PAL", "Various"]
 
-  s.signing_key    = '/home/sixarm/keys/certs/sixarm-rsa-4096-x509-20145314-private.pem'
-  s.cert_chain     = ['/home/sixarm/keys/certs/sixarm-rsa-4096-x509-20150314-public.pem']
+  s.signing_key    = "/home/sixarm/keys/certs/sixarm-rsa-4096-x509-20145314-private.pem"
+  s.cert_chain     = ["/home/sixarm/keys/certs/sixarm-rsa-4096-x509-20150314-public.pem"]
 
   s.platform       = Gem::Platform::RUBY
-  s.require_path   = 'lib'
+  s.require_path   = "lib"
   s.has_rdoc       = true
 
   top_files        = [".gemtest", "CONTRIBUTING.md", "Rakefile", "README.md", "VERSION"]
-  lib_files        = ["lib/#{s.name}.rb"] 
+  lib_files        = ["lib/#{s.name}.rb"]
   test_files       = ["test/#{s.name}_test.rb","test/test_1.yml","test/test_2.yml"]
 
   s.files          = top_files + lib_files + test_files
