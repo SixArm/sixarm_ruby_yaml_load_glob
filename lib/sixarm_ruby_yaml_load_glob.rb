@@ -3,7 +3,7 @@
 Please see README
 =end
 
-require 'yaml'
+require "yaml"
 
 module YAML
 
