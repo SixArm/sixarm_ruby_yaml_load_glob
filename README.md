@@ -11,17 +11,7 @@
 
 Load YAML documents by using file globs, and iterate on the results.
 
-Example: iterate on the documents
-
-    YAML.load_glob_documents("*.yml","*.yaml"){|document|
-      ...
-    }
-
-Example: iterate on the documents' keys and values
-
-    YAML.load_glob_keys("*.yaml"){|key,values|
-      ...
-    }
+Examples below.
 
 For docs go to <http://sixarm.com/sixarm_ruby_yaml_load_glob/doc>
 
@@ -51,3 +41,17 @@ To require the gem in your code:
     require "sixarm_ruby_yaml_load_glob"
 
 <!--INSTALL-SHUT-->
+
+## Examples
+
+Iterate on documents:
+
+    YAML.load_glob_documents("*.yml","*.yaml"){|document|
+      ...
+    }
+
+Iterate on documents' keys and values:
+
+    YAML.load_glob_keys("*.yaml"){|key,values|
+      ...
+    }
