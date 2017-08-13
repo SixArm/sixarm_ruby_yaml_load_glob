@@ -5,7 +5,7 @@ Gem::Specification.new do |s|
   s.name           = "sixarm_ruby_yaml_load_glob"
   s.summary        = "SixArm.com → Ruby → YAML load glob to documents"
   s.description    = "Extends YAML with #load_glob_documents and #load_glob_keys"
-  s.version        = "2.0.1"
+  s.version        = "2.0.2"
 
   s.author         = "SixArm"
   s.email          = "sixarm@sixarm.com"
